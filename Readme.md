@@ -1,5 +1,5 @@
 # steps to run the codes 
 
-- ```yarn install``
+- ```yarn install```
 
 - ```yarn start```
