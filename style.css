@@ -468,36 +468,36 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.container {
+.containery {
   width: 100%;
 }
 
 @media (min-width: 640px) {
-  .container {
+  .containery {
     max-width: 640px;
   }
 }
 
 @media (min-width: 768px) {
-  .container {
+  .containery {
     max-width: 768px;
   }
 }
 
 @media (min-width: 1024px) {
-  .container {
+  .containery {
     max-width: 1024px;
   }
 }
 
 @media (min-width: 1280px) {
-  .container {
+  .containery {
     max-width: 1280px;
   }
 }
 
 @media (min-width: 1536px) {
-  .container {
+  .containery {
     max-width: 1536px;
   }
 }
@@ -556,7 +556,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-gray-900 {
   --tw-bg-opacity: 1;
-  background-color: #218722;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
 .bg-blue-100 {

@@ -32,16 +32,16 @@ const renderTokensForOwner = (ownerAddress) => {
   ).then(response => response.json()).then(({ assets }) => {
     assets.forEach((attributes) => {
 
-      document.getElementById("container").append(createTokenElement(attributes))
+      document.getElementById("containery").append(createTokenElement(attributes))
     })
   })
 }
 
 const createTokenElement = ({ name, collection, description, permalink, image_preview_url, token_id }) => {
-  const newElement = document.getElementById("nft_template").content.cloneNode(true)
+  const newElement = document.getElementById("full_nft").content.cloneNode(true)
 
   newElement.querySelector("section").id = `${collection.slug}_${token_id}`
-  
+
   newElement.querySelector("h1").innerText = name
   newElement.querySelector("a").href = permalink
   newElement.querySelector("img").src = image_preview_url
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   window.ethereum.on("accountsChanged", async () => {
     accountAddress = await connector()
-    document.getElementById("container").innerHTML = ""
+    document.getElementById("containery").innerHTML = ""
     renderTokensForOwner(accountAddress)
   })
 })
