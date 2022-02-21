@@ -1,6 +1,9 @@
+
+
 import { ethers } from "https://cdn.skypack.dev/ethers"
 
-const connect = () => {
+const connector = () => {
+
   return new Promise(async (resolve, reject) => {
     try {
       const provider = new ethers.providers.Web3Provider(window.ethereum)
@@ -45,11 +48,11 @@ const createTokenElement = ({ name, collection, description, permalink, image_pr
 document.addEventListener("DOMContentLoaded", async () => {
   let accountAddress
 
-  accountAddress = await connect()
+  accountAddress = await connector()
   renderTokensForOwner(accountAddress)
 
   window.ethereum.on("accountsChanged", async () => {
-    accountAddress = await connect()
+    accountAddress = await connector()
     document.getElementById("container").innerHTML = ""
     renderTokensForOwner(accountAddress)
   })
