@@ -6,7 +6,7 @@ const connector = () => {
 
   return new Promise(async (resolve, reject) => {
     try {
-      // this is the provider for metamask
+      // this is the provider for metamask connect.....
       const provider = new ethers.providers.Web3Provider(window.ethereum)
       await provider.send("eth_requestAccounts", [])
       const signer = provider.getSigner()
