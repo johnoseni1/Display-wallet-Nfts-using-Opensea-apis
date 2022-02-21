@@ -25,6 +25,7 @@ const connector = () => {
 
 const renderTokensForOwner = (ownerAddress) => {
   fetch(
+    // this is opensea apis to get it ....
     `https://api.opensea.io/api/v1/assets?owner=${ownerAddress}&order_direction=desc&offset=0&limit=30`,
     { method: "GET", headers: { Accept: "application/json" } }
   ).then(response => response.json()).then(({ assets }) => {
